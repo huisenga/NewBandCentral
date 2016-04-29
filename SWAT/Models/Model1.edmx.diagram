@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="908196a8d15a44fd92dbffbe1d2dfbc2" Name="Diagram1" ZoomLevel="33" ShowGrid="true">
+        <EntityTypeShape EntityType="UWSocWorkMainModel.oneRow" Width="2.125" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.orgChecked" Width="2.125" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.sysdiagram" Width="2.125" PointX="15.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tbl_FORM_BSW_CheckStatus" Width="2.125" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tbl_FORM_BSWApplication" Width="2.125" PointX="18.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tbl_FORM_BSWApplication_Essay" Width="2.125" PointX="9.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tbl_FORM_BSWApplication_Landing" Width="2.125" PointX="12.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tbl_FORM_BSWApplication_Recommendation" Width="2.125" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tbl_FORM_BSWApplication_Recommender" Width="2.625" PointX="21.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tbl_FORM_BSWApplication_Transcript" Width="2.125" PointX="21.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tbl_FORM_BSWReview" Width="2.125" PointX="21.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblAdvisor_Note" Width="2.125" PointX="3.625" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblAffAgreement" Width="2.125" PointX="6.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblAffAgreement_Deleted" Width="2.125" PointX="9.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblAllID" Width="2.125" PointX="12.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblAsset" Width="2.125" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblAssetLocation" Width="2.125" PointX="24.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblAssetPerson" Width="2.125" PointX="24.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblAssetType" Width="2.125" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblChangeLog" Width="2.125" PointX="24.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblConcentration" Width="2.125" PointX="24.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblContact_Log" Width="2.125" PointX="12.625" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblContact_Log_Queue" Width="2.125" PointX="25.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblEmail" Width="2.125" PointX="15.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblEntityform" Width="2.125" PointX="24.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblEntityform_alldata" Width="2.125" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblEntityform_type" Width="2.125" PointX="27.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblExemptionGrid" Width="2.125" PointX="27.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblFieldContact" Width="2.125" PointX="6.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblGrad_APPLICANTS" Width="2.125" PointX="27.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblGrad_APPS" Width="2.125" PointX="6.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblGrad_APPS_Cleaning" Width="2.125" PointX="9.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblGrad_COMPLETION_DETAILS" Width="2.125" PointX="28.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblGrad_COMPLETION_SUMMARY" Width="2.125" PointX="18.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblGrad_DECISIONS" Width="2.125" PointX="27.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblGRAD_RATINGS" Width="2.125" PointX="12.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblGRAD_SUPLAPP_RESPONSES" Width="2.125" PointX="21.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupAddress_Types" Width="2.125" PointX="0.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupConc_Type" Width="2.125" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupContact_Method" Width="2.125" PointX="9.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupContact_Type" Width="2.125" PointX="9.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupCourse_Group" Width="2.125" PointX="3.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupCourse_ORDER" Width="2.125" PointX="6.625" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupDiversity" Width="2.125" PointX="30.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupEthnic" Width="2.125" PointX="30.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupExemption_Type" Width="2.125" PointX="30.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupFlag" Width="2.125" PointX="3.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupFocusArea" Width="2.125" PointX="30.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupGroup" Width="2.125" PointX="30.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupOrgStatu" Width="2.125" PointX="30.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupPhone_Types" Width="2.125" PointX="30.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupPlacement_Status" Width="2.125" PointX="30.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupProgram" Width="2.125" PointX="31.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupSupervisorType" Width="2.125" PointX="0.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupTerm" Width="2.125" PointX="15.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupVetran_Status" Width="2.125" PointX="18.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLookupYear" Width="2.125" PointX="21.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblLoookup_579_Topics" Width="2.125" PointX="33.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblMSW_RecievedTranscripts" Width="2.125" PointX="33.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblNotification" Width="2.125" PointX="33.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblOrg" Width="2.125" PointX="33.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblOrg_Deleted" Width="2.125" PointX="33.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblOrg_Old" Width="2.125" PointX="30.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblPlacement" Width="2.125" PointX="33.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblReview" Width="2.125" PointX="12.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblReview_Email" Width="2.125" PointX="15.625" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblReview_Score_Override" Width="2.125" PointX="34.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblReviewer" Width="2.125" PointX="12.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblReviewers_TERM" Width="2.125" PointX="15.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblReviewTeam" Width="2.125" PointX="9.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT" Width="2.125" PointX="24.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT_Address" Width="2.125" PointX="3.625" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT_COURSES" Width="2.125" PointX="0.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT_COURSES_EXEMPTIONS" Width="2.125" PointX="3.625" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT_COURSES_GroupOveride" Width="2.125" PointX="6.625" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT_COURSES_NOTE" Width="2.125" PointX="3.625" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT_DIRECTORY" Width="2.125" PointX="12.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT_FLAG" Width="2.125" PointX="6.625" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT_LOCAL" Width="2.125" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT_PHD" Width="2.125" PointX="15.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT_PLAN" Width="2.125" PointX="3.625" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSTDNT_TIMETABLE" Width="2.125" PointX="18.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSupervisor" Width="2.125" PointX="9.625" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblUGRD_APPS" Width="2.125" PointX="33.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblUGRD_Decisions" Width="2.125" PointX="36.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblUser" Width="2.125" PointX="36.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblWorkLocation" Width="2.125" PointX="9.625" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.russData" Width="2.125" PointX="36.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblEmail_Single" Width="2.125" PointX="36.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblEmail_WISC" Width="2.125" PointX="36.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblEntityForm_Data_PIVOT" Width="2.125" PointX="36.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblGrad_DECISION_SINGLE_FINAL" Width="2.125" PointX="37.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblGrad_DECISION_SINGLE_VIEW" Width="2.125" PointX="39.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblReview_Count_Complete" Width="2.125" PointX="39.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblReview_COUNT_VIEW" Width="2.125" PointX="39.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.tblSeminar" Width="2.125" PointX="39.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.view_Grad_Apps_New_Students" Width="2.125" PointX="39.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.view_Placement_Single_View" Width="2.125" PointX="39.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.view_Program_Courses" Width="2.125" PointX="39.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.view_Program_Courses_InProgram" Width="2.125" PointX="39.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.view_Program_Courses_OutProgram" Width="2.125" PointX="39.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.view_Seminar_Students" Width="2.125" PointX="0.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.viewCompletedForm" Width="2.125" PointX="42.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UWSocWorkMainModel.viewPTPAdmissionData" Width="2.125" PointX="3.75" PointY="42.75" IsExpanded="true" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblAdvisor_Note_tblSTDNT_LOCAL" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblContact_Log_Method" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.tblContact_Log_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.tblSupervisor_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.tblWorkLocations_FK01" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblLookupAddress_Types_tblLookupAddress_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblLookupAddress_Types_tblLookupAddress_Types1" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblSTDNT_Address_tblLookupAddress_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblLookupCourse_ORDER_tblLookupCourse_ORDER" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblSTDNT_COURSES_GroupOveride_tblLookupCourse_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblSTDNT_Flag_tblLookupFlag" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.tblReview_Email_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblReviewers_TERM_tblReviewers" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblSTDNT_Address_tblSTDNT_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblSTDNT_Address_tblSTDNT_LOCAL" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblSTDNT_COURSES_EXEMPTIONS_tblSTDNT_LOCAL" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblSTDNT_COURSES_GroupOveride_tblSTDNT_LOCAL" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblSTDNT_COURSES_NOTE_tblSTDNT_LOCAL" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblSTDNT_FLAG_tblSTDNT_LOCAL" ManuallyRouted="false" />
+        <AssociationConnector Association="UWSocWorkMainModel.FK_tblSTDNT_PLAN_tblSTDNT_LOCAL" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,578 @@
+﻿@model SWAT.Models.tblSTDNT_LOCAL
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblSTDNT_LOCAL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrevLName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrevLName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialNeeds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialNeeds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialNeedsNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialNeedsNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SWMailbox)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SWMailbox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SummerContactYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SummerContactYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SummerStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SummerStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SummerCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SummerCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SummerState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SummerState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SummerZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SummerZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermanentStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermanentStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermanentCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermanentCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermanentState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermanentState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermanentZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermanentZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CellPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CellPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkPhoneExtension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkPhoneExtension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomePhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomePhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomePhoneExtension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomePhoneExtension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermanentPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermanentPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermanentPhoneExtension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermanentPhoneExtension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SummerPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SummerPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SummerPhoneExtension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SummerPhoneExtension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WIBackgroundComp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WIBackgroundComp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WIBackgroundCheckYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WIBackgroundCheckYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WIDiscrepancy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WIDiscrepancy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OOSBackgroundComp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OOSBackgroundComp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OOSBackgroundCheckYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OOSBackgroundCheckYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OOSDiscrepancy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OOSDiscrepancy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OOSBackgroundCheckState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OOSBackgroundCheckState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BackgroundCheckComment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BackgroundCheckComment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlumniTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlumniTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlumniCompany)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlumniCompany)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentEmployment_1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentEmployment_1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentEmployment_2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentEmployment_2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentEmploymentAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentEmploymentAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IVE_Student)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IVE_Student)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IVE_EMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IVE_EMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IVE_Phone1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IVE_Phone1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IVE_Phone2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IVE_Phone2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousEmployer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousEmployer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfyears)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfyears)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeofEmployment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeofEmployment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentAdded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentAdded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentUpdated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentUpdated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VetranStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VetranStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Exemptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exemptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GridInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GridInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PT_StudentGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PT_StudentGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdvSt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdvSt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FocusArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FocusArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.studentPhotoLoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.studentPhotoLoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currentProgram)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currentProgram)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isSchoolSocialWork)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isSchoolSocialWork)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.resCounty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resCounty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_String)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_String)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MSW_Ant_GradTerm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MSW_Ant_GradTerm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isProspective)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isProspective)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FocusAreaUpdated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FocusAreaUpdated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.upsized_ts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.upsized_ts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblAdvisor_Note.Note_Text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblAdvisor_Note.Note_Text)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,584 @@
+﻿@model SWAT.Models.tblSTDNT
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblSTDNT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAMPUS_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAMPUS_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FERPA_FLAG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FERPA_FLAG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DECEASED_IND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DECEASED_IND)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WITHDREW_IND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WITHDREW_IND)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WITHDREW_REASON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WITHDREW_REASON)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WITHDREW_DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WITHDREW_DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRIMARY_ACADEMIC_GROUP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRIMARY_ACADEMIC_GROUP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACADEMIC_LEVEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACADEMIC_LEVEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACADEMIC_LEVEL_PROJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACADEMIC_LEVEL_PROJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACADEMIC_LEVEL_EOT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACADEMIC_LEVEL_EOT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAREER_TYPE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAREER_TYPE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAREER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAREER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GENDER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GENDER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AGE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AGE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITIZEN_IND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITIZEN_IND)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITIZEN_STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITIZEN_STATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RESIDENCY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RESIDENCY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TUITION_RESIDENCY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TUITION_RESIDENCY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VISA_PERMIT_TYPE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VISA_PERMIT_TYPE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VISA_PERMIT_NUMBER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VISA_PERMIT_NUMBER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COUNTRY_OF_CITIZENSHIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COUNTRY_OF_CITIZENSHIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COUNTRY_OF_CITIZENSHIP_DESCR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COUNTRY_OF_CITIZENSHIP_DESCR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COUNTRY_OF_BIRTH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COUNTRY_OF_BIRTH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COUNTRY_OF_BIRTH_DESCR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COUNTRY_OF_BIRTH_DESCR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRIMARY_SUPPORT_DESCR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRIMARY_SUPPORT_DESCR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SECONDARY_SUPPORT_DESCR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SECONDARY_SUPPORT_DESCR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MARITAL_STATUS_DESCR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MARITAL_STATUS_DESCR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VETERAN_STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VETERAN_STATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIVERSITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIVERSITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIVERSITY_DESCR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIVERSITY_DESCR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ETHNIC_GROUP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ETHNIC_GROUP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ETHNIC_GROUP_DESCR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ETHNIC_GROUP_DESCR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MINORITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MINORITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TARGETED_MINORITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TARGETED_MINORITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACADEMIC_LOAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACADEMIC_LOAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ADMIT_TYPE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADMIT_TYPE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACADEMIC_ADVANCEMENT_PROG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACADEMIC_ADVANCEMENT_PROG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DISSERTATOR_IND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DISSERTATOR_IND)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HIGH_SCHOOL_CODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HIGH_SCHOOL_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HIGH_SCHOOL_PERCENTILE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HIGH_SCHOOL_PERCENTILE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MATRICULATION_TERM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MATRICULATION_TERM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEG_EXPECTED)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEG_EXPECTED)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_CREDITS_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_CREDITS_TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_TAKEN_CREDITS_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_TAKEN_CREDITS_TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_TAKEN_CREDITS_GPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_TAKEN_CREDITS_GPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_TAKEN_CREDITS_NOGPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_TAKEN_CREDITS_NOGPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_TAKEN_CREDITS_PROGRESS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_TAKEN_CREDITS_PROGRESS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_TAKEN_CREDITS_PROG_GRAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_TAKEN_CREDITS_PROG_GRAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_INPROG_CREDITS_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_INPROG_CREDITS_TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_INPROG_CREDITS_GPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_INPROG_CREDITS_GPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_INPROG_CREDITS_NOGPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_INPROG_CREDITS_NOGPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_CREDITS_AUDIT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_CREDITS_AUDIT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_GRADE_POINTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_GRADE_POINTS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_GPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_GPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUM_CREDITS_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUM_CREDITS_TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUM_TAKEN_CREDITS_GPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUM_TAKEN_CREDITS_GPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUM_TRANSFER_CREDITS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUM_TRANSFER_CREDITS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUM_TEST_CREDITS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUM_TEST_CREDITS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUM_OTHER_CREDITS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUM_OTHER_CREDITS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUM_GRADE_POINTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUM_GRADE_POINTS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUM_GPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUM_GPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PREVIOUS_TERM_GPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PREVIOUS_TERM_GPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PREVIOUS_GPA_TERM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PREVIOUS_GPA_TERM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NEGATIVE_SERVICE_IND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NEGATIVE_SERVICE_IND)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEMESTER_HONORS1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEMESTER_HONORS1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEMESTER_HONORS2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEMESTER_HONORS2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EXTRACT_DATE_TIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EXTRACT_DATE_TIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.upsize_ts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.upsize_ts)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
