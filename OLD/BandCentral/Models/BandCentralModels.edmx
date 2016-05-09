@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BandCentralModels.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bands">
+          <Key>
+            <PropertyRef Name="BandID" />
+          </Key>
+          <Property Name="BandID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BandName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BandUsers">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="BandID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="BandID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_BandUsers_Bands">
+          <End Role="Bands" Type="Self.Bands" Multiplicity="1" />
+          <End Role="BandUsers" Type="Self.BandUsers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bands">
+              <PropertyRef Name="BandID" />
+            </Principal>
+            <Dependent Role="BandUsers">
+              <PropertyRef Name="BandID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BandUsers_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="BandUsers" Type="Self.BandUsers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="BandUsers">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BandCentralModelsStoreContainer">
+          <EntitySet Name="Bands" EntityType="Self.Bands" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BandUsers" EntityType="Self.BandUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BandUsers_Bands" Association="Self.FK_BandUsers_Bands">
+            <End Role="Bands" EntitySet="Bands" />
+            <End Role="BandUsers" EntitySet="BandUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BandUsers_Users" Association="Self.FK_BandUsers_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="BandUsers" EntitySet="BandUsers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BandCentralModels" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Band">
+          <Key>
+            <PropertyRef Name="BandID" />
+          </Key>
+          <Property Name="BandID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="Self.BandUsers" FromRole="Bands" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Bands" Relationship="Self.BandUsers" FromRole="Users" ToRole="Bands" />
+        </EntityType>
+        <Association Name="BandUsers">
+          <End Role="Bands" Type="Self.Band" Multiplicity="*" />
+          <End Role="Users" Type="Self.User" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="BandCentralEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bands" EntityType="Self.Band" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="BandUsers" Association="Self.BandUsers">
+            <End Role="Bands" EntitySet="Bands" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BandCentralModelsStoreContainer" CdmEntityContainer="BandCentralEntities">
+          <EntitySetMapping Name="Bands">
+            <EntityTypeMapping TypeName="BandCentralModels.Band">
+              <MappingFragment StoreEntitySet="Bands">
+                <ScalarProperty Name="BandID" ColumnName="BandID" />
+                <ScalarProperty Name="BandName" ColumnName="BandName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="BandCentralModels.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="BandUsers" TypeName="BandCentralModels.BandUsers" StoreEntitySet="BandUsers">
+            <EndProperty Name="Bands">
+              <ScalarProperty Name="BandID" ColumnName="BandID" />
+            </EndProperty>
+            <EndProperty Name="Users">
+              <ScalarProperty Name="UserID" ColumnName="UserID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

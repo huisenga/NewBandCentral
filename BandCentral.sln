@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandCentral", "BandCentral\BandCentral.csproj", "{BD0DD22A-B7E6-411C-B1E5-5BF6B183C334}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandCentral", "BandCentral\BandCentral.csproj", "{77AAE2A4-2AF9-411F-BF51-AD2E09CE49FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandCentral.Data", "BandCentral.EntityFramwork\BandCentral.Data.csproj", "{57F60DA6-CD3D-4338-8176-9401407C2AAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandCentral.Service", "BandCentral.DAL\BandCentral.Service.csproj", "{6FA493FD-81CD-4F29-A002-09C3FEE807E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BD0DD22A-B7E6-411C-B1E5-5BF6B183C334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD0DD22A-B7E6-411C-B1E5-5BF6B183C334}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD0DD22A-B7E6-411C-B1E5-5BF6B183C334}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD0DD22A-B7E6-411C-B1E5-5BF6B183C334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77AAE2A4-2AF9-411F-BF51-AD2E09CE49FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77AAE2A4-2AF9-411F-BF51-AD2E09CE49FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77AAE2A4-2AF9-411F-BF51-AD2E09CE49FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77AAE2A4-2AF9-411F-BF51-AD2E09CE49FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57F60DA6-CD3D-4338-8176-9401407C2AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F60DA6-CD3D-4338-8176-9401407C2AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F60DA6-CD3D-4338-8176-9401407C2AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F60DA6-CD3D-4338-8176-9401407C2AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA493FD-81CD-4F29-A002-09C3FEE807E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA493FD-81CD-4F29-A002-09C3FEE807E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA493FD-81CD-4F29-A002-09C3FEE807E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA493FD-81CD-4F29-A002-09C3FEE807E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
