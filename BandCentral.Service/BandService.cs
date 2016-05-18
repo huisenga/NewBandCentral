@@ -20,16 +20,19 @@ namespace BandCentral.Service
         void DeleteBand(int ID);
         void UpdateBand(Band band);
         void AddUserBand(Band band, ApplicationUser user);
+        void RemoveUserBand(Band band, ApplicationUser user);
     }
 
     public class BandService : IBandService
     {
         private readonly IBandRepository bandsRepository;
+        private readonly IUserRepository userRepository;
         private readonly IUnitOfWork unitOfWork;
 
-        public BandService(IBandRepository bandsRepository, IUnitOfWork unitOfWork)
+        public BandService(IBandRepository bandsRepository, IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
             this.bandsRepository = bandsRepository;
+            this.userRepository = userRepository;
             this.unitOfWork = unitOfWork;
         }
         #region IBandService Members
@@ -64,6 +67,11 @@ namespace BandCentral.Service
         public void AddUserBand(Band band, ApplicationUser user)
         {
             band.Users.Add(user);
+            bandsRepository.Update(band);
+        }
+        public void RemoveUserBand(Band band, ApplicationUser user)
+        {
+            band.Users.Remove(user);
             bandsRepository.Update(band);
         }
         public void SaveBand()

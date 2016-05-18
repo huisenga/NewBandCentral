@@ -1,14 +1,14 @@
 ﻿@model BandCentral.ViewModels.BandViewModel
 
 @{
-    ViewBag.Title = "Add Favorite";
+    ViewBag.Title = "Remove Favorite";
 }
 
 <h2>Favorite</h2>
 
 <p class="text-danger">@ViewBag.ErrorMessage</p>
 
-<h3>Are you sure you want to favorite @Html.DisplayFor(model => model.BandName)?</h3>
+<h3>Are you sure you want to remove @Html.DisplayFor(model => model.BandName) from favorites?</h3>
 <div>
     <hr />
 
@@ -16,7 +16,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Add Favorite" class="btn btn-default btn-success" /> |
+            <input type="submit" value="Remove" class="btn btn-default btn-danger" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }

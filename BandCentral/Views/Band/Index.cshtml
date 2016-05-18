@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<BandCentral.ViewModels.BandViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Bands";
 }
 
 <h2>Index</h2>
@@ -32,11 +32,11 @@
         <td>
             @if (item.isFavorited)
             {
-
+                @Html.ActionLink("Remove Favorite", "RemoveFavorite", new { id = item.ID }, new { @class = "btn btn-default btn-danger" })
             }
             else
             {
-                @Html.ActionLink("Add Favorite", "AddFavorite", new { id = item.ID })
+                @Html.ActionLink("Add Favorite", "AddFavorite", new { id = item.ID }, new {@class = "btn btn-default btn-success" })
             }
         </td>
         <td>

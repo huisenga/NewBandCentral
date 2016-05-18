@@ -17,11 +17,13 @@ namespace BandCentral.Service
     public class UserService : IUserService
     {
         private readonly IUserRepository userRepository;
+        private readonly IBandRepository bandRepository;
         private readonly IUnitOfWork unitOfWork;
 
-        public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork)
+        public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork, IBandRepository bandRepository)
         {
             this.userRepository = userRepository;
+            this.bandRepository = bandRepository;
             this.unitOfWork = unitOfWork;
         }
         #region IBandService Members
@@ -30,6 +32,11 @@ namespace BandCentral.Service
         {
             var user = userRepository.GetById(ID);
             return user;
+        }
+        public IEnumerable<Band> GetUserBands(string ID)
+        {
+            var user = userRepository.GetById(ID);
+            return user.Bands;
         }
         #endregion
     }

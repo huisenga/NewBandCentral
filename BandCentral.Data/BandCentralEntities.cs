@@ -28,7 +28,16 @@ namespace BandCentral.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<IdentityUser>().ToTable("Users");
-            modelBuilder.Entity<ApplicationUser>().ToTable("Users");
+            modelBuilder.Entity<ApplicationUser>().ToTable("Users")
+                .HasMany(b => b.Bands)
+                .WithMany(r => r.Users)
+                .Map(mc => 
+                {
+                    mc.MapLeftKey("UserID");
+                    mc.MapRightKey("BandID");
+                    mc.ToTable("UserBands");
+                });
+            
             //modelBuilder.Configurations.Add(new ApplicationUserConfig());
             
             modelBuilder.Entity<IdentityRole>().ToTable("Roles");

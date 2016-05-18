@@ -26,9 +26,26 @@ namespace BandCentral.Controllers
         // GET: Band
         public ActionResult Index()
         {
-            IEnumerable<BandViewModel> viewModelBands;
-            viewModelBands = Mapper.Map<IEnumerable<Band>, IEnumerable<BandViewModel>>(bandService.GetBands().ToList());
-            return View(viewModelBands);
+            List<BandViewModel> bandViewModels = new List<BandViewModel>();
+            List<Band> bands;
+
+
+            bands = bandService.GetBands().ToList();
+            foreach (var band in bands)
+            {
+                Boolean favoriteStatus = band.Users.Any(u => u.Id == User.Identity.GetUserId());
+                bandViewModels.Add(new BandViewModel
+                {
+                    ID = band.ID,
+                    BandName = band.BandName,
+                    isFavorited = favoriteStatus
+                });
+            }
+            
+            //TODO: Set up custom mapping for automapper to handle custom isFavorited field
+            //bandViewModels = Mapper.Map<IEnumerable<Band>, IEnumerable<BandViewModel>>(bandService.GetBands().ToList());
+
+            return View(bandViewModels);
         }
 
         // GET: Band/Details/5
@@ -144,18 +161,43 @@ namespace BandCentral.Controllers
                 bandService.SaveBand();
                 return RedirectToAction("Index");
             }
-            catch(Exception e)
+            catch
             {
-                ViewBag.ErrorMessage = e.Message;
+
+                ViewBag.ErrorMessage = "Band could not be added to favorites.";
                 return View();
             }
-            //catch
-            //{
-
-            //    ViewBag.ErrorMessage = "Band could not be added to favorites."
-            //    return View();
-            //}
+        }
+        //GET: Band/RemoveFavorite/5
+        [Authorize]
+        public ActionResult RemoveFavorite(int? id)
+        {
+            if (!id.HasValue)
+                return View("Index");
+            Band band = bandService.GetBand(id.Value);
+            BandViewModel bandViewModel = Mapper.Map<Band, BandViewModel>(band);
+            return View(bandViewModel);
         }
 
+        //GET: Band/AddFavorite/5
+        [Authorize]
+        [HttpPost]
+        public ActionResult RemoveFavorite(int id, FormCollection collection)
+        {
+            try
+            {
+                Band band = bandService.GetBand(id);
+                ApplicationUser user = userService.GetUser(User.Identity.GetUserId());
+                bandService.RemoveUserBand(band, user);
+                bandService.SaveBand();
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+
+                ViewBag.ErrorMessage = "Band could not be removed from favorites.";
+                return View();
+            }
+        }
     }
 }

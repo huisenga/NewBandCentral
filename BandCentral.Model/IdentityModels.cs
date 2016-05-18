@@ -19,6 +19,6 @@ namespace BandCentral.Model
         }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public List<Band> Bands { get; set; }
+        public virtual List<Band> Bands { get; set; }
     }
 }

@@ -270,6 +270,7 @@
     <Content Include="Views\Band\Edit.cshtml" />
     <Content Include="Views\Manage\ChangeName.cshtml" />
     <Content Include="Views\Band\AddFavorite.cshtml" />
+    <Content Include="Views\Band\RemoveFavorite.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
