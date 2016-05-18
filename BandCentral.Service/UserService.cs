@@ -36,11 +36,6 @@ namespace BandCentral.Service
             var user = userRepository.GetById(ID);
             return user;
         }
-        public IEnumerable<Band> GetUserBands(string ID)
-        {
-            var user = userRepository.GetById(ID);
-            return user.Bands;
-        }
         #endregion
     }
 }
