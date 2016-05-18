@@ -49,10 +49,6 @@
     <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BandCentral.Models\BandCentral.Model.csproj">
-      <Project>{D184EBB4-07D2-4BFE-80AB-FE84D5F7C52C}</Project>
-      <Name>BandCentral.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BandCentral.Data\BandCentral.Data.csproj">
       <Project>{C72D8EE5-4D21-47C1-BC27-A2C76497B864}</Project>
       <Name>BandCentral.Data</Name>
