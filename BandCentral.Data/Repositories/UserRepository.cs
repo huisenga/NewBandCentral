@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace BandCentral.Data.Repositories
 {
-    public class ApplicationUserRepository : RepositoryBase<ApplicationUser>, IApplicationUserUserRepository
+    public class UserRepository : RepositoryBase<ApplicationUser>, IUserRepository
     {
-        public ApplicationUserRepository(IDbFactory dbFactory)
+        public UserRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
 
-    public interface IApplicationUserUserRepository : IRepository<ApplicationUser>
+    public interface IUserRepository : IRepository<ApplicationUser>
     {
 
     }

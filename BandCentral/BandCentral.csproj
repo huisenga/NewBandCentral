@@ -182,10 +182,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ApplicationBaseController.cs" />
     <Compile Include="Controllers\BandController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -262,13 +262,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Account\Profile.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Band\Index.cshtml" />
     <Content Include="Views\Band\Details.cshtml" />
     <Content Include="Views\Band\Create.cshtml" />
     <Content Include="Views\Band\Delete.cshtml" />
     <Content Include="Views\Band\Edit.cshtml" />
     <Content Include="Views\Manage\ChangeName.cshtml" />
+    <Content Include="Views\Band\AddFavorite.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -282,6 +283,10 @@
     <ProjectReference Include="..\BandCentral.Data\BandCentral.Data.csproj">
       <Project>{C72D8EE5-4D21-47C1-BC27-A2C76497B864}</Project>
       <Name>BandCentral.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BandCentral.Model\BandCentral.Model.csproj">
+      <Project>{d184ebb4-07d2-4bfe-80ab-fe84d5f7c52c}</Project>
+      <Name>BandCentral.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\BandCentral.Service\BandCentral.Service.csproj">
       <Project>{9393BC5F-ECD1-449D-BA9F-3AFBD9DEEC3C}</Project>

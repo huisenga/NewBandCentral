@@ -55,17 +55,6 @@ namespace BandCentral.Controllers
         }
 
         //
-        // GET: /Account/Profile
-        [Authorize]
-        public new ActionResult Profile()
-        {
-            ProfileViewModel profileViewModel;
-            var user = UserManager.FindById(User.Identity.GetUserId());
-            profileViewModel = Mapper.Map<ApplicationUser, ProfileViewModel>(user);
-            return View(profileViewModel);
-        }
-
-        //
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)

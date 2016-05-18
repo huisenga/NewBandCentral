@@ -53,6 +53,10 @@
       <Project>{C72D8EE5-4D21-47C1-BC27-A2C76497B864}</Project>
       <Name>BandCentral.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BandCentral.Model\BandCentral.Model.csproj">
+      <Project>{d184ebb4-07d2-4bfe-80ab-fe84d5f7c52c}</Project>
+      <Name>BandCentral.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -11,7 +11,7 @@ namespace BandCentral.Model
         public  int ID { get; set; }
         public string BandName { get; set; }
 
-        public virtual List<ApplicationUser> User { get; set; }
+        public virtual List<ApplicationUser> Users { get; set; }
 
         public DateTime? DateCreated { get; set; }
         public DateTime? DateUpdated { get; set; }

@@ -18,7 +18,6 @@ namespace BandCentral.Data
 
         public DbSet<Band> Bands { get; set; }
 
-        //Below is inherited
         //public DbSet<ApplicationUser> Users { get; set; }
 
         public virtual void Commit()

@@ -60,7 +60,10 @@ namespace BandCentral.Data.Infrastructure
         {
             return dbSet.Find(id);
         }
-
+        public virtual T GetById(string id)
+        {
+            return dbSet.Find(id);
+        }
         public virtual IEnumerable<T> GetAll()
         {
             return dbSet.ToList();

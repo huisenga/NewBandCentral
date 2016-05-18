@@ -21,3 +21,26 @@ c:\users\huisenga\documents\visual studio 2015\Projects\BandCentral.Service\bin\
 c:\users\huisenga\documents\visual studio 2015\Projects\BandCentral.Service\obj\Debug\BandCentral.Service.dll
 c:\users\huisenga\documents\visual studio 2015\Projects\BandCentral.Service\obj\Debug\BandCentral.Service.pdb
 c:\users\huisenga\documents\visual studio 2015\Projects\BandCentral.Service\bin\Debug\BandCentral.Service.dll.config
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\obj\Debug\BandCentral.Service.csprojResolveAssemblyReference.cache
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\obj\Debug\BandCentral.Service.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\obj\Debug\BandCentral.Service.pdb
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\BandCentral.Service.dll.config
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\BandCentral.Service.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\BandCentral.Service.pdb
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\BandCentral.Data.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\BandCentral.Models.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\EntityFramework.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\Microsoft.Owin.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\Owin.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\BandCentral.Data.pdb
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\BandCentral.Models.pdb
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\EntityFramework.xml
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\Microsoft.Owin.xml
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml

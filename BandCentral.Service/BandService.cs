@@ -19,6 +19,7 @@ namespace BandCentral.Service
         void SaveBand();
         void DeleteBand(int ID);
         void UpdateBand(Band band);
+        void AddUserBand(Band band, ApplicationUser user);
     }
 
     public class BandService : IBandService
@@ -60,11 +61,17 @@ namespace BandCentral.Service
         {
             bandsRepository.Update(band);
         }
-
+        public void AddUserBand(Band band, ApplicationUser user)
+        {
+            band.Users.Add(user);
+            bandsRepository.Update(band);
+        }
         public void SaveBand()
         {
             unitOfWork.Commit();
         }
+
+        
 
         #endregion
 

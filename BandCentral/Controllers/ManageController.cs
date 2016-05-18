@@ -82,6 +82,63 @@ namespace BandCentral.Controllers
         }
 
         //
+        // GET: /Manage/ChangePassword
+        public ActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        //
+        // POST: /Manage/ChangePassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
+            if (result.Succeeded)
+            {
+                var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+                if (user != null)
+                {
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                }
+                return RedirectToAction("Index", new { Message = ManageMessageId.ChangePasswordSuccess });
+            }
+            AddErrors(result);
+            return View(model);
+        }
+
+        //
+        // GET: /Manage/ChangeName
+        public ActionResult ChangeName()
+        {
+            ApplicationUser u = UserManager.FindById(User.Identity.GetUserId());
+            ChangeNameViewModel uVM = AutoMapper.Mapper.Map<ApplicationUser, ChangeNameViewModel>(u);
+            return View(uVM);
+        }
+
+        //
+        // POST: /Manage/ChangeName
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ChangeName(ChangeNameViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            ApplicationUser u = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+            u.FirstName = model.FirstName;
+            u.LastName = model.LastName;
+            await UserManager.UpdateAsync(u);
+            return RedirectToAction("Index", new { Message = ManageMessageId.ChangeNameSuccess });
+        }
+        #region Unused Identity
+        //
         // POST: /Manage/RemoveLogin
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -219,62 +276,7 @@ namespace BandCentral.Controllers
             return RedirectToAction("Index", new { Message = ManageMessageId.RemovePhoneSuccess });
         }
 
-        //
-        // GET: /Manage/ChangePassword
-        public ActionResult ChangePassword()
-        {
-            return View();
-        }
-
-        //
-        // POST: /Manage/ChangePassword
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-            var result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
-            if (result.Succeeded)
-            {
-                var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
-                if (user != null)
-                {
-                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-                }
-                return RedirectToAction("Index", new { Message = ManageMessageId.ChangePasswordSuccess });
-            }
-            AddErrors(result);
-            return View(model);
-        }
-
-        //
-        // GET: /Manage/ChangeName
-        public ActionResult ChangeName()
-        {
-            ApplicationUser u = UserManager.FindById(User.Identity.GetUserId());
-            ChangeNameViewModel uVM = AutoMapper.Mapper.Map<ApplicationUser, ChangeNameViewModel>(u);
-            return View(uVM);
-        }
-
-        //
-        // POST: /Manage/ChangeName
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> ChangeName(ChangeNameViewModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-            ApplicationUser u = await UserManager.FindByIdAsync(User.Identity.GetUserId());
-            u.FirstName = model.FirstName;
-            u.LastName = model.LastName;
-            await UserManager.UpdateAsync(u);
-            return RedirectToAction("Index", new { Message = ManageMessageId.ChangeNameSuccess });
-        }
+        
 
         //
         // GET: /Manage/SetPassword
@@ -364,8 +366,8 @@ namespace BandCentral.Controllers
 
             base.Dispose(disposing);
         }
-
-#region Helpers
+#endregion
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
