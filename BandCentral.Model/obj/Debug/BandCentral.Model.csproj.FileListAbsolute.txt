@@ -22,3 +22,13 @@ C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Model\bin\Debug\Mi
 C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Model\obj\Debug\BandCentral.Model.csprojResolveAssemblyReference.cache
 C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Model\obj\Debug\BandCentral.Models.dll
 C:\Users\huisenga\Documents\GitHub\NewBandCentral\BandCentral.Model\obj\Debug\BandCentral.Models.pdb
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral.Model\bin\Debug\BandCentral.Models.dll.config
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral.Model\bin\Debug\BandCentral.Models.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral.Model\bin\Debug\BandCentral.Models.pdb
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral.Model\bin\Debug\EntityFramework.xml
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral.Model\obj\Debug\BandCentral.Model.csprojResolveAssemblyReference.cache
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral.Model\obj\Debug\BandCentral.Models.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral.Model\obj\Debug\BandCentral.Models.pdb

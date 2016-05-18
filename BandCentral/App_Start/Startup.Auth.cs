@@ -7,6 +7,7 @@ using Microsoft.Owin.Security.Google;
 using Owin;
 using BandCentral.Model;
 using BandCentral.Data;
+using BandCentral.Service;
 
 namespace BandCentral
 {

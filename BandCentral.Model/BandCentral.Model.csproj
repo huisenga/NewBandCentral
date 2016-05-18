@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BandModel.cs" />
-    <Compile Include="IdentityModels.cs" />
+    <Compile Include="ApplicationUserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

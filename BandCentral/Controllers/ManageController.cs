@@ -9,6 +9,7 @@ using Microsoft.Owin.Security;
 using BandCentral.ViewModels;
 using BandCentral;
 using BandCentral.Model;
+using BandCentral.Service;
 
 namespace BandCentral.Controllers
 {

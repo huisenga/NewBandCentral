@@ -87,7 +87,7 @@
   <ItemGroup>
     <Compile Include="BandCentralEntities.cs" />
     <Compile Include="BandConfig.cs" />
-    <Compile Include="IdentityConfig.cs" />
+    <Compile Include="ApplicationUserConfig.cs" />
     <Compile Include="Infrastructure\DbFactory.cs" />
     <Compile Include="Infrastructure\Disposable.cs" />
     <Compile Include="Infrastructure\IDbFactory.cs" />

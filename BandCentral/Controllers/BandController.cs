@@ -52,10 +52,10 @@ namespace BandCentral.Controllers
         public ActionResult Details(int id)
         {
             Band band;
-            BandViewModel bandViewModel;
+            DetailsBandViewModel detailsBandViewModel;
             band = bandService.GetBand(id);
-            bandViewModel = Mapper.Map<Band, BandViewModel>(band);
-            return View(bandViewModel);
+            detailsBandViewModel = Mapper.Map<Band, DetailsBandViewModel>(band);
+            return View(detailsBandViewModel);
         }
 
         // GET: Band/Create

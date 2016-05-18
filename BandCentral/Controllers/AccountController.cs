@@ -10,7 +10,9 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BandCentral.ViewModels;
 using BandCentral.Model;
+using BandCentral.Service;
 using AutoMapper;
+
 
 namespace BandCentral.Controllers
 {

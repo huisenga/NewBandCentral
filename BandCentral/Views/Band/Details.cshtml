@@ -1,4 +1,4 @@
-﻿@model BandCentral.ViewModels.BandViewModel
+﻿@model BandCentral.ViewModels.DetailsBandViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -16,7 +16,16 @@
         <dd>
             @Html.DisplayFor(model => model.BandName)
         </dd>
+        @if (Model.DateUpdated.HasValue)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.DateUpdated)
+            </dt>
 
+            <dd>
+                @Html.DisplayFor(model => model.DateUpdated)
+            </dd>
+        }
     </dl>
 </div>
 <p>

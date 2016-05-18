@@ -15,10 +15,16 @@ namespace BandCentral.App_Start
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMissingTypeMaps = true;
+                //Band View Models
                 cfg.CreateMap<Band, BandViewModel>();
                 cfg.CreateMap<BandViewModel, Band>();
+                cfg.CreateMap<Band, DetailsBandViewModel>();
+                cfg.CreateMap<DetailsBandViewModel, Band>();
+
+                //User View Models
                 cfg.CreateMap<ApplicationUser, ProfileViewModel>();
                 cfg.CreateMap<ProfileViewModel, ApplicationUser>();
+
             });
         }
     }
