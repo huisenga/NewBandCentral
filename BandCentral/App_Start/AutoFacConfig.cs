@@ -12,7 +12,7 @@ using System.Web.Mvc;
 
 namespace BandCentral.App_Start
 {
-    public class Bootstrapper
+    public class AutoFacConfig
     {
 
         public static void Run()

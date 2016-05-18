@@ -23,7 +23,7 @@ namespace BandCentral
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             //Autofac Configs
-            Bootstrapper.Run();
+            AutoFacConfig.Run();
 
             //AutoMapper configs
             AutoMapperConfig.RegisterMappings();
