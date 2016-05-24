@@ -35,17 +35,23 @@ namespace BandCentral.Data.Infrastructure
         #region Implementation
         public virtual void Add(T entity)
         {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
             dbSet.Add(entity);
         }
 
         public virtual void Update(T entity)
         {
+            if (entity == null) throw new ArgumentNullException("entity");
             dbSet.Attach(entity);
             dataContext.Entry(entity).State = EntityState.Modified;
         }
 
         public virtual void Delete(T entity)
         {
+            if (entity == null) throw new ArgumentNullException("entity");
             dbSet.Remove(entity);
         }
 

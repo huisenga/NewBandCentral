@@ -27,6 +27,11 @@ namespace BandCentral.Controllers
             List<BandViewModel> bandViewModels = new List<BandViewModel>();
             List<Band> bands;
 
+            //Set messages returned from redirects
+            if(TempData["ErrorMessage"] != null)
+                ViewBag.ErrorMessage = TempData["ErrorMessage"].ToString();
+            if (TempData["SuccessMessage"] != null)
+                ViewBag.SuccessMessage = TempData["SuccessMessage"].ToString();
 
             bands = bandService.GetBands().ToList();
             foreach (var band in bands)
@@ -34,7 +39,7 @@ namespace BandCentral.Controllers
                 Boolean favoriteStatus = band.Users.Any(u => u.Id == User.Identity.GetUserId());
                 bandViewModels.Add(new BandViewModel
                 {
-                    ID = band.ID,
+                    Id = band.Id,
                     BandName = band.BandName,
                     isFavorited = favoriteStatus
                 });
@@ -44,11 +49,16 @@ namespace BandCentral.Controllers
         }
 
         // GET: Band/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
+            if (!id.HasValue)
+            {
+                TempData["ErrorMessage"] = "Band Id was not set";
+                return RedirectToAction("Index");
+            }
             Band band;
             DetailsBandViewModel detailsBandViewModel;
-            band = bandService.GetBand(id);
+            band = bandService.GetBand(id.Value);
             detailsBandViewModel = Mapper.Map<Band, DetailsBandViewModel>(band);
             return View(detailsBandViewModel);
         }
@@ -72,6 +82,8 @@ namespace BandCentral.Controllers
                 band = Mapper.Map<BandViewModel, Band>(bandViewModel);
                 bandService.CreateBand(band);
                 bandService.SaveBand();
+
+                TempData["SuccessMessage"] = bandViewModel.BandName + " was created!";
                 return RedirectToAction("Index");
             }
             catch
@@ -82,9 +94,14 @@ namespace BandCentral.Controllers
 
         // GET: Band/Edit/5
         [Authorize]
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            Band band = bandService.GetBand(id);
+            if (!id.HasValue)
+            {
+                TempData["ErrorMessage"] = "Band Id was not set";
+                return RedirectToAction("Index");
+            }
+            Band band = bandService.GetBand(id.Value);
             BandViewModel bandViewModel = Mapper.Map<Band, BandViewModel>(band);
             return View(bandViewModel);
         }
@@ -100,6 +117,7 @@ namespace BandCentral.Controllers
                 Band band = Mapper.Map<BandViewModel, Band>(bandViewModel);
                 bandService.UpdateBand(band);
                 bandService.SaveBand();
+                TempData["SuccessMessage"] = bandViewModel.BandName + " was updated!";
                 return RedirectToAction("Index");
             }
             catch
@@ -110,9 +128,14 @@ namespace BandCentral.Controllers
 
         // GET: Band/Delete/5
         [Authorize]
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            Band band = bandService.GetBand(id);
+            if (!id.HasValue)
+            {
+                TempData["ErrorMessage"] = "Band Id was not set";
+                return RedirectToAction("Index");
+            }
+            Band band = bandService.GetBand(id.Value);
             BandViewModel bandViewModel = Mapper.Map<Band, BandViewModel>(band);
             return View(bandViewModel);
         }
@@ -123,10 +146,12 @@ namespace BandCentral.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, FormCollection collection)
         {
+
             try
             {
                 bandService.DeleteBand(id);
                 bandService.SaveBand();
+                TempData["SuccessMessage"] = "Band was deleted!";
                 return RedirectToAction("Index");
             }
             catch
@@ -141,7 +166,10 @@ namespace BandCentral.Controllers
         public ActionResult AddFavorite(int? id)
         {
             if (!id.HasValue)
-                return View("Index");
+            {
+                TempData["ErrorMessage"] = "Band Id was not set";
+                return RedirectToAction("Index");
+            }
             Band band = bandService.GetBand(id.Value);
             BandViewModel bandViewModel = Mapper.Map<Band, BandViewModel>(band);
             return View(bandViewModel);
@@ -159,6 +187,8 @@ namespace BandCentral.Controllers
                 ApplicationUser user = userService.GetUser(User.Identity.GetUserId());
                 bandService.AddUserBand(band,user);
                 bandService.SaveBand();
+
+                TempData["SuccessMessage"] = "Band was added to favorites!";
                 return RedirectToAction("Index");
             }
             catch
@@ -173,7 +203,10 @@ namespace BandCentral.Controllers
         public ActionResult RemoveFavorite(int? id)
         {
             if (!id.HasValue)
-                return View("Index");
+            {
+                TempData["ErrorMessage"] = "Band Id was not set";
+                return RedirectToAction("Index");
+            }
             Band band = bandService.GetBand(id.Value);
             BandViewModel bandViewModel = Mapper.Map<Band, BandViewModel>(band);
             return View(bandViewModel);
@@ -191,6 +224,8 @@ namespace BandCentral.Controllers
                 ApplicationUser user = userService.GetUser(User.Identity.GetUserId());
                 bandService.RemoveUserBand(band, user);
                 bandService.SaveBand();
+
+                TempData["SuccessMessage"] = "Band was removed from favorites!";
                 return RedirectToAction("Index");
             }
             catch

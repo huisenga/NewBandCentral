@@ -13,7 +13,7 @@ namespace BandCentral.Data
         protected override void Seed(ApplicationDbContext context)
         {
             GetBands().ForEach(b => context.Bands.Add(b));
-            context.Commit();
+            context.SaveChanges();
         }
 
         private static List<Band> GetBands()

@@ -11,12 +11,6 @@ namespace BandCentral.Data.Repositories
     public class BandRepository: RepositoryBase<Band>, IBandRepository
     {
         public BandRepository(IDbFactory dbFactory) : base(dbFactory) { }
-
-        public override void Update(Band entity)
-        {
-            entity.DateUpdated = DateTime.Now;
-            base.Update(entity);
-        }
     }
     public interface IBandRepository: IRepository<Band>
     {

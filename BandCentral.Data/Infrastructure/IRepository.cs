@@ -16,7 +16,7 @@ namespace BandCentral.Data.Infrastructure
         // Marks an entity to be removed
         void Delete(T entity);
         void Delete(Expression<Func<T, bool>> where);
-        // Get an entity by int id
+        // Get an entity by id
         T GetById(int id);
         T GetById(string id);
         // Get an entity using delegate

@@ -4,7 +4,10 @@
     ViewBag.Title = "Bands";
 }
 
-<h2>Index</h2>
+<h2>Bands</h2>
+
+<p class="text-danger">@ViewBag.ErrorMessage</p>
+<p class="text-success">@ViewBag.SuccessMessage</p>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,7 +15,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ID)
+            @Html.DisplayNameFor(model => model.Id)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.BandName)
@@ -24,7 +27,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ID)
+            @Html.DisplayFor(modelItem => item.Id)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.BandName)
@@ -32,17 +35,17 @@
         <td>
             @if (item.isFavorited)
             {
-                @Html.ActionLink("Remove Favorite", "RemoveFavorite", new { id = item.ID }, new { @class = "btn btn-default btn-danger" })
+                @Html.ActionLink("Remove Favorite", "RemoveFavorite", new { id = item.Id }, new { @class = "btn btn-default btn-danger" })
             }
             else
             {
-                @Html.ActionLink("Add Favorite", "AddFavorite", new { id = item.ID }, new {@class = "btn btn-default btn-success" })
+                @Html.ActionLink("Add Favorite", "AddFavorite", new { id = item.Id }, new {@class = "btn btn-default btn-success" })
             }
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new {  id=item.ID  }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            @Html.ActionLink("Edit", "Edit", new {  id=item.Id  }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
         </td>
     </tr>
 }

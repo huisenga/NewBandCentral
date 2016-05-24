@@ -23,7 +23,7 @@ namespace BandCentral.Data.Infrastructure
 
         public void Commit()
         {
-            DbContext.Commit();
+            DbContext.SaveChanges();
         }
     }
 }

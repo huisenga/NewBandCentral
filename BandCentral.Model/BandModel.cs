@@ -4,24 +4,17 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BandCentral.Model;
 
 namespace BandCentral.Model
 {
-    public class Band
+    public class Band: AuditableEntity<long>
     {
-        [Key]
-        public  int ID { get; set; }
+
         [Required]
         public string BandName { get; set; }
 
         public virtual List<ApplicationUser> Users { get; set; }
 
-        public DateTime? DateCreated { get; set; }
-        public DateTime? DateUpdated { get; set; }
-
-        public Band()
-        {
-            DateCreated = DateTime.Now;
-        }
     }
 }
