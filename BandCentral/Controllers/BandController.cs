@@ -4,10 +4,8 @@ using BandCentral.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
-using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.Identity;
 
 namespace BandCentral.Controllers
@@ -41,9 +39,6 @@ namespace BandCentral.Controllers
                     isFavorited = favoriteStatus
                 });
             }
-            
-            //TODO: Set up custom mapping for automapper to handle custom isFavorited field
-            //bandViewModels = Mapper.Map<IEnumerable<Band>, IEnumerable<BandViewModel>>(bandService.GetBands().ToList());
 
             return View(bandViewModels);
         }
@@ -68,6 +63,7 @@ namespace BandCentral.Controllers
         // POST: Band/Create
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(BandViewModel bandViewModel)
         {
             try
@@ -96,6 +92,7 @@ namespace BandCentral.Controllers
         // POST: Band/Edit/5
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(BandViewModel bandViewModel)
         {
             try
@@ -123,6 +120,7 @@ namespace BandCentral.Controllers
         // POST: Band/Delete/5
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, FormCollection collection)
         {
             try
@@ -133,6 +131,7 @@ namespace BandCentral.Controllers
             }
             catch
             {
+                ViewBag.ErrorMessage = "Band could not be deleted.";
                 return View();
             }
         }
@@ -151,6 +150,7 @@ namespace BandCentral.Controllers
         //GET: Band/AddFavorite/5
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult AddFavorite(int id, FormCollection collection)
         {
             try
@@ -179,9 +179,10 @@ namespace BandCentral.Controllers
             return View(bandViewModel);
         }
 
-        //GET: Band/AddFavorite/5
+        //POST: Band/RemoveFavorite/5
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult RemoveFavorite(int id, FormCollection collection)
         {
             try
