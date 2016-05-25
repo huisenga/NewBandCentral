@@ -175,7 +175,7 @@ namespace BandCentral.Controllers
             return View(bandViewModel);
         }
 
-        //GET: Band/AddFavorite/5
+        //Post: Band/AddFavorite/5
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
