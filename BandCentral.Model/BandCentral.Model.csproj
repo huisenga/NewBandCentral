@@ -57,10 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuditableEntity.cs" />
+    <Compile Include="BaseModels\AuditableEntity.cs" />
     <Compile Include="BandModel.cs" />
     <Compile Include="ApplicationUserModel.cs" />
-    <Compile Include="Entity.cs" />
+    <Compile Include="BaseModels\Entity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
