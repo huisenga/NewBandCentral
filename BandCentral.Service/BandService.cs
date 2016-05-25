@@ -1,13 +1,7 @@
-﻿using BandCentral;
-using BandCentral.Data.Infrastructure;
+﻿using BandCentral.Data.Infrastructure;
 using BandCentral.Data.Repositories;
 using BandCentral.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
 
 namespace BandCentral.Service
 {

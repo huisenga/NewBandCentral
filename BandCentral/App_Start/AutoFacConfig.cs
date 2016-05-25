@@ -3,11 +3,7 @@ using Autofac.Integration.Mvc;
 using BandCentral.Data.Infrastructure;
 using BandCentral.Data.Repositories;
 using BandCentral.Service;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Web;
 using System.Web.Mvc;
 
 namespace BandCentral.App_Start
