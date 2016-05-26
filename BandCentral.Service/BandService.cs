@@ -14,7 +14,9 @@ namespace BandCentral.Service
         void DeleteBand(int ID);
         void UpdateBand(Band band);
         void AddUserBand(Band band, ApplicationUser user);
+        void AddUserBand(int bandID, string userID);
         void RemoveUserBand(Band band, ApplicationUser user);
+        void RemoveUserBand(int bandID, string userID);
     }
 
     public class BandService : IBandService
@@ -42,7 +44,11 @@ namespace BandCentral.Service
             var band = bandsRepository.GetById(id);
             return band;
         }
-
+        public string GetBandName(int id)
+        {
+            var band = bandsRepository.GetById(id);
+            return band.BandName;
+        }
         public void CreateBand(Band band)
         {
             bandsRepository.Add(band);
@@ -63,8 +69,23 @@ namespace BandCentral.Service
             band.Users.Add(user);
             bandsRepository.Update(band);
         }
+        public void AddUserBand(int bandID, string userID)
+        {
+            var band = bandsRepository.GetById(bandID);
+            var user = userRepository.GetById(userID);
+            band.Users.Add(user);
+            bandsRepository.Update(band);
+        }
         public void RemoveUserBand(Band band, ApplicationUser user)
         {
+            band.Users.Remove(user);
+            bandsRepository.Update(band);
+        }
+        public void RemoveUserBand(int bandID, string userID)
+        {
+            var band = bandsRepository.GetById(bandID);
+            var user = userRepository.GetById(userID);
+
             band.Users.Remove(user);
             bandsRepository.Update(band);
         }

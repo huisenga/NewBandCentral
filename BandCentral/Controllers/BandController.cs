@@ -13,12 +13,10 @@ namespace BandCentral.Controllers
     public class BandController : Controller
     {
         private readonly IBandService bandService;
-        private readonly IUserService userService;
 
-        public BandController(IBandService bandService, IUserService userService)
+        public BandController(IBandService bandService)
         {
             this.bandService = bandService;
-            this.userService = userService;
         }
 
         // GET: Band
@@ -183,9 +181,7 @@ namespace BandCentral.Controllers
         {
             try
             {
-                Band band = bandService.GetBand(id);
-                ApplicationUser user = userService.GetUser(User.Identity.GetUserId());
-                bandService.AddUserBand(band,user);
+                bandService.AddUserBand(id, User.Identity.GetUserId());
                 bandService.SaveBand();
 
                 TempData["SuccessMessage"] = "Band was added to favorites!";
@@ -220,9 +216,7 @@ namespace BandCentral.Controllers
         {
             try
             {
-                Band band = bandService.GetBand(id);
-                ApplicationUser user = userService.GetUser(User.Identity.GetUserId());
-                bandService.RemoveUserBand(band, user);
+                bandService.RemoveUserBand(id, User.Identity.GetUserId());
                 bandService.SaveBand();
 
                 TempData["SuccessMessage"] = "Band was removed from favorites!";
