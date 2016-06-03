@@ -23,10 +23,14 @@ namespace BandCentral.Data.Infrastructure
         // Get an entity by id
         T GetById(int id);
         T GetById(string id);
+        
         // Get an entity using delegate
         T Get(Expression<Func<T, bool>> where);
+
         // Gets all entities of type T
         IEnumerable<T> GetAll();
+        // Get all entities using delegate
+        IEnumerable<T> GetAllWhere(Expression<Func<T, bool>> where);
         // Gets entities using delegate
         IEnumerable<T> GetMany(Expression<Func<T, bool>> where);
     }
@@ -97,7 +101,10 @@ namespace BandCentral.Data.Infrastructure
         {
             return dbSet.ToList();
         }
-
+        public virtual IEnumerable<T> GetAllWhere(Expression<Func<T, bool>> where)
+        {
+            return dbSet.Where(where).ToList();
+        }
         public virtual IEnumerable<T> GetMany(Expression<Func<T, bool>> where)
         {
             return dbSet.Where(where).ToList();

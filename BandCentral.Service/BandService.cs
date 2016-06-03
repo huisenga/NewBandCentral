@@ -1,13 +1,17 @@
 ﻿using BandCentral.Data.Infrastructure;
 using BandCentral.Data.Repositories;
 using BandCentral.Model;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using PagedList;
 
 namespace BandCentral.Service
 {
     public interface IBandService
     {
         IEnumerable<Band> GetBands();
+        IEnumerable<Band> SearchBands(string searchString);
         Band GetBand(int ID);
         void CreateBand(Band band);
         void SaveBand();
@@ -36,7 +40,15 @@ namespace BandCentral.Service
             var bands = bandsRepository.GetAll();
             return bands;
         }
-
+        public IEnumerable<Band> SearchBands(string searchString)
+        {
+            var bands = bandsRepository.GetAll();
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                bands = bands.Where(b => b.BandName.ToLower().Contains(searchString.ToLower()));
+            }
+            return bands;
+        }
         public Band GetBand(int id)
         {
             var band = bandsRepository.GetById(id);

@@ -283,3 +283,7 @@ C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral\bin
 C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral\obj\Debug\BandCentral.csprojResolveAssemblyReference.cache
 C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral\obj\Debug\BandCentral.dll
 C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral\obj\Debug\BandCentral.pdb
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral\bin\PagedList.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral\bin\PagedList.Mvc.dll
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral\bin\PagedList.xml
+C:\Users\huisenga\Documents\GitHub\NewBandCentral\NewBandCentral\BandCentral\bin\PagedList.Mvc.xml

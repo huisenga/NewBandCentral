@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web.Mvc;
 using AutoMapper;
 using Microsoft.AspNet.Identity;
+using PagedList;
 
 namespace BandCentral.Controllers
 {
@@ -22,18 +23,31 @@ namespace BandCentral.Controllers
         }
 
         // GET: Band
-        public ActionResult Index()
+        public ActionResult Index(string searchString, string currentFilter, int? page)
         {
+
             List<BandViewModel> bandViewModels = new List<BandViewModel>();
-            List<Band> bands;
+            IEnumerable<Band> bands;
+
+            //Check for new search
+            if (searchString == null)
+            {
+                // if not new search, set search to last known search 
+                searchString = currentFilter;
+            }
+            else
+            {
+                // if new search, revert to page 1 of new results
+                page = 1;
+            }
 
             //Set messages returned from redirects
-            if(TempData["ErrorMessage"] != null)
+            if (TempData["ErrorMessage"] != null)
                 ViewBag.ErrorMessage = TempData["ErrorMessage"].ToString();
             if (TempData["SuccessMessage"] != null)
                 ViewBag.SuccessMessage = TempData["SuccessMessage"].ToString();
 
-            bands = bandService.GetBands().ToList();
+            bands = bandService.SearchBands(searchString);
             foreach (var band in bands)
             {
                 Boolean favoriteStatus = band.Users.Any(u => u.Id == User.Identity.GetUserId());
@@ -44,8 +58,8 @@ namespace BandCentral.Controllers
                     isFavorited = favoriteStatus
                 });
             }
-
-            return View(bandViewModels);
+            int pageNumber = (page ?? 1);
+            return View(bandViewModels.ToPagedList(pageNumber, 5));
         }
 
         // GET: Band/Details/5

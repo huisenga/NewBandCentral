@@ -13,6 +13,7 @@ namespace BandCentral.ViewModels
         [Display(Name = "Band Name")]
         public string BandName { get; set; }
         public bool isFavorited { get; set; }
+
     }
     public class DetailsBandViewModel
     {

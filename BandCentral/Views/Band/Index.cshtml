@@ -1,4 +1,5 @@
-﻿@model IEnumerable<BandCentral.ViewModels.BandViewModel>
+﻿@model PagedList.IPagedList<BandCentral.ViewModels.BandViewModel>
+@using PagedList.Mvc;
 
 @{
     ViewBag.Title = "Bands";
@@ -9,16 +10,24 @@
 <p class="text-danger">@ViewBag.ErrorMessage</p>
 <p class="text-success">@ViewBag.SuccessMessage</p>
 
+@using (Html.BeginForm())
+{
+    <p>
+        Find by band name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string) <br />
+        <input type="submit" value="Filter" />
+    </p>
+}
+ 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Id)
+            ID
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BandName)
+            Band Name
         </th>
         <th></th>
         <th></th>
@@ -51,3 +60,7 @@
 }
 
 </table>
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, currentFilter = ViewBag.CurrentFilter }))
